@@ -1,0 +1,11 @@
+my-weather-cmp {
+  float:left;
+  height: 25vh;
+  width: 32%;
+  margin: 10px;
+  border: 1px solid #000;
+}
+h2 {
+  width: 100%;
+  text-align: center;
+}

@@ -1,0 +1,23 @@
+{
+  "name": "weatherapp",
+  "version": "0.0.1",
+  "description": "Weather app for the fifth assignment of advanced webtech @rwth",
+  "main": "dist/main.js",
+  "scripts": {
+    "start": "node dist/main.js"
+  },
+  "keywords": [
+    "socket",
+    "node",
+    "angular2"
+  ],
+  "author": "Chocoloper",
+  "license": "GPL",
+  "dependencies": {
+    "angular2": "2.0.0-alpha.47",
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
+    "socketio": "^1.0.0",
+    "systemjs": "^0.19.6"
+  }
+}
