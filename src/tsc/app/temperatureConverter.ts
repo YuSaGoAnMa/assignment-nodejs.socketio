@@ -15,8 +15,7 @@ export class TemperaturConverterPipe implements PipeTransform {
       return ((value / 9 *5)+ 32).toFixed(places) + ' °F' ;
     }
     if(value && !isNaN(value) && args[0] === 'K') {
-      value = 273.15 + Number(value) ;
-      return value + ' K';
+      return (273.15 + Number(value)).toFixed(places) + ' K';
     }
     return;
   }
