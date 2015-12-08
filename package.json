@@ -3,8 +3,13 @@
   "version": "0.0.1",
   "description": "Weather app for the fifth assignment of advanced webtech @rwth",
   "main": "dist/main.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YuSaGoAnMa/assignment.nodejs.socketio"
+  },
   "scripts": {
-    "start": "node dist/main.js"
+    "start": "node dist/main.js",
+    "tsc": "tsc -w"
   },
   "keywords": [
     "socket",
@@ -12,12 +17,15 @@
     "angular2"
   ],
   "author": "Chocoloper",
-  "license": "GPL",
+  "license": "GPL-2.0",
   "dependencies": {
     "angular2": "2.0.0-alpha.47",
     "body-parser": "^1.14.1",
     "express": "^4.13.3",
     "socketio": "^1.0.0",
     "systemjs": "^0.19.6"
+  },
+  "devDependencies": {
+    "typescript": "^1.7.3"
   }
 }
