@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "node dist/main.js",
-    "tsc": "tsc -w"
+    "tsc": "tsc"
   },
   "keywords": [
     "socket",
