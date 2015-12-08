@@ -53,9 +53,7 @@ expressServer.use('/', routes);
 
 //Catch 404
 expressServer.use((req: any, res: any, next: any) => {
-  var err = new Error('Not Found');
-  err['status'] = 404;
-  next(err);
+  res.sendStatus(404);
 })
 
 //make the server listen
