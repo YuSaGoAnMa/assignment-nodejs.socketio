@@ -18,6 +18,7 @@
         "./node_modules/angular2/typings/*.ts"
     ],
     "files": [
+        "./src/tsc/app/temperatureConverter.ts",
         "./src/tsc/app/weatherApp.ts",
         "./src/tsc/app/weatherComp.ts",
         "./src/tsc/bootstrap.ts",

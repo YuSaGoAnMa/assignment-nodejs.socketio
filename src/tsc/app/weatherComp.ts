@@ -1,16 +1,24 @@
 import { Component, Input, Observable, AfterContentInit } from 'angular2/angular2';
 import { Http } from 'angular2/http';
+import { TemperaturConverterPipe } from './temperatureConverter';
 
 declare var io:any;
 
 @Component({
   selector: 'my-weather-cmp',
-  template: `<h2>{{city}}</h2><div>Current Temperature: {{temperature | async}} °C</div>`
+  pipes: [ TemperaturConverterPipe ],
+  template: `
+  <h2>{{city}}</h2>
+  <div>Current Temperature</div>
+  <div>[Celsius]: {{temperature | async | temperaturConverter:'C' }}</div>
+  <div>[Fahrenheit]: {{temperature | async | temperaturConverter:'F':2 }}</div>
+  <div>[Kelvin]: {{temperature | async | temperaturConverter:'K':2 }}</div>
+  `
 })
 export class WeatherComp implements AfterContentInit{
   @Input() city: string;
   public weather:any;
-  public temperature:Observable<string>;
+  public temperature:Observable<number>;
 
     constructor(public http: Http) {
       const BASE_URL = 'ws://'+location.hostname+':'+location.port;
@@ -20,7 +28,7 @@ export class WeatherComp implements AfterContentInit{
     }
 
     ngAfterContentInit():void {
-      this.temperature = Observable.fromEvent(this.weather, this.city);
-      //.map((data:any) => data);
+      const absolutZero: number = -270.42;
+      this.temperature = Observable.fromEvent(this.weather, this.city).startWith(absolutZero);
     }
 }

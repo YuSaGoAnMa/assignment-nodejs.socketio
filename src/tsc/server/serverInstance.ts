@@ -33,7 +33,7 @@ setInterval( ()=> {
   }
   if(i<1000) i++;
   else i=0;
-}, 1000);
+}, 500);
 
 //this is our expressjs implementation
 expressServer.use(bodyParser.json());
