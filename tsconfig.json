@@ -23,7 +23,6 @@
         "./src/tsc/app/weatherComp.ts",
         "./src/tsc/bootstrap.ts",
         "./src/tsc/main.ts",
-        "./src/tsc/server/routes.ts",
         "./src/tsc/server/serverInstance.ts",
         "./node_modules/angular2/typings/tsd.d.ts"
     ],
