@@ -1,3 +1,4 @@
+//Entrypoint of our server
 var server = require('./server/serverInstance');
 
 //Check and set environment/config of the app
