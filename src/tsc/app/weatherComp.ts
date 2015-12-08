@@ -9,7 +9,7 @@ declare var io:any;
   pipes: [ TemperaturConverterPipe ],
   template: `
   <h2>{{city}}</h2>
-  <div>Current Temperature</div>
+  <div>Current Temperatures:</div>
   <div>[Celsius]: {{temperature | async | temperaturConverter:'C' }}</div>
   <div>[Fahrenheit]: {{temperature | async | temperaturConverter:'F':2 }}</div>
   <div>[Kelvin]: {{temperature | async | temperaturConverter:'K':2 }}</div>
