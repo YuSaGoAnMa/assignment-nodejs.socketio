@@ -10,9 +10,9 @@ var fs = require('fs');
 var weather = socket.of('/weather');
 
 //some variable we need
-var cities= ["Aachen", "Berlin", "SHARKTOWN"];
-var temperatures:string[]=[];
-var intervallCounter: number=0;
+var cities = ["Aachen", "Berlin", "SHARKTOWN"];
+var temperatures: string[] = [];
+var intervallCounter: number = 0;
 
 //main functionality. Adds every important functionality to our server
 var initServerInstance = () => {
